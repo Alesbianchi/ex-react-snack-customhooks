@@ -1,15 +1,16 @@
-// src/App.jsx
-import useDate from "./useDate.jsx";
+
+import useCustomPointer from "./useCustomPointer.jsx";
 
 function App() {
-  const currentDate = useDate();
+  const customPointer = useCustomPointer("🔥");
 
   return (
-    <div style={{ textAlign: "center", marginTop: "3rem" }}>
-      <h1>Data e ora attuali:</h1>
-      <p>{currentDate.toLocaleString()}</p>
+    <div style={{ padding: "3rem", textAlign: "center" }}>
+      <h1>Sposta il mouse per vedere il cursore personalizzato!</h1>
+      {customPointer}
     </div>
   );
 }
 
 export default App;
+
