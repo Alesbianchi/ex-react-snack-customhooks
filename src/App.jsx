@@ -1,12 +1,13 @@
-import useSwitch from "./useSwitch.jsx";
+// src/App.jsx
+import useDate from "./useDate.jsx";
 
 function App() {
-  const [isOn, toggle] = useSwitch();
+  const currentDate = useDate();
 
   return (
     <div style={{ textAlign: "center", marginTop: "3rem" }}>
-      <h1>Il valore è: {isOn ? "ON" : "OFF"}</h1>
-      <button onClick={toggle}>Cambia Stato</button>
+      <h1>Data e ora attuali:</h1>
+      <p>{currentDate.toLocaleString()}</p>
     </div>
   );
 }
